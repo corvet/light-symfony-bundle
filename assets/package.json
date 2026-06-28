@@ -1,0 +1,75 @@
+{
+    "name": "@corvet/light-symfony-bundle",
+    "version": "1.0.0",
+    "symfony": {
+        "controllers": {
+            "light-boolean": {
+                "main": "controllers/light_boolean_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-date": {
+                "main": "controllers/light_date_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-decimal": {
+                "main": "controllers/light_decimal_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-entity": {
+                "main": "controllers/light_entity_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-integer": {
+                "main": "controllers/light_integer_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-string": {
+                "main": "controllers/light_string_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            },
+            "light-text": {
+                "main": "controllers/light_text_controller.js",
+                "webpackMode": "eager",
+                "fetch": "eager",
+                "enabled": true,
+                "autoimport": {
+                    "@corvet/light-symfony-bundle/assets/styles/style.css": true
+                }
+            }
+        },
+        "importmap": {
+            "inputmask": "^5.0.9",
+            "flatpickr": "^4.6.13"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "controllers": {
+        "light-boolean": {
+            "main": "controllers/light_boolean_controller.js",
+            "fetch": "eager"
+        },
+        "light-date": {
+            "main": "controllers/light_date_controller.js",
+            "fetch": "eager"
+        },
+        "light-decimal": {
+            "main": "controllers/light_decimal_controller.js",
+            "fetch": "eager"
+        },
+        "light-entity": {
+            "main": "controllers/light_entity_controller.js",
+            "fetch": "eager"
+        },
+        "light-integer": {
+            "main": "controllers/light_integer_controller.js",
+            "fetch": "eager"
+        },
+        "light-string": {
+            "main": "controllers/light_string_controller.js",
+            "fetch": "eager"
+        },
+        "light-text": {
+            "main": "controllers/light_text_controller.js",
+            "fetch": "eager"
+        }
+    },
+    "entrypoints": []
+}
