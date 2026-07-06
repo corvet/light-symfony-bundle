@@ -1,0 +1,27 @@
+<table class="table">
+	<thead>
+		<tr>
+			{% for field, title in table.headers %}
+				<th>{{ title }}</th>
+			{% endfor %}
+		</tr>
+	</thead>
+	<tbody>
+	{% endfor row in table.rows %}
+	<tr>
+		{% for field, cell in row %}
+			<td>
+				{% if cell.meta.type == 'date' %}
+					{{ cell.value ? cell.value|date(cell.meta.options.format ?? 'd.m.Y') : '' }}
+				{% elseif cell.meta.type == 'link' %}
+					{# Тут генерація <a href="{{ path(...) }}"> #}
+				{% elseif cell.meta.type == 'money' %}
+					{{ cell.value|number_format(2) }}
+					{{ cell.meta.options.currency ?? 'UAH' }}
+				{% else %}
+					{{ cell.value }}
+				{% endif %}
+			</td>
+		{% endfor %}
+	</tr>
+{% endfor %}</tbody></table>
