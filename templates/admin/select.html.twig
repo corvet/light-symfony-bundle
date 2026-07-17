@@ -1,0 +1,40 @@
+{# @CorvetLightSymfony/admin/select.html.twig #}
+<ul>
+	{% for group, entities in entityTree %}
+		<li>
+			<strong>{{ group }}</strong>
+			<ul>
+				{% for entity in entities %}
+					<li>
+						{# 1. Посилання на автоматичний Adminer-інтерфейс бандла #}
+						<a href="{{ path('admin_entity_index', { 'entity': entity.slug }) }}">
+							{{ entity.shortName }}
+						</a>
+
+						{% if entity.hasCustom %}
+							{# 2. Якщо прописано LightEntity #}
+							-
+							{% if entity.customIndex %}
+								<a href="{{ path(entity.customIndex) }}">
+									{{ entity.title ?? entity.shortName }}
+								</a>
+							{% else %}
+								<span>{{ entity.title }}</span>
+							{% endif %}
+
+							{# 3. Виведення індикаторів ISEND #}
+							<span style="color: #28a745; margin-left: 10px; font-weight: bold;">
+								[{{ entity.isend|join(' ') }}]
+							</span>
+						{% else %}
+							{# Якщо сутність гола — показуємо, що кастомних роутів немає #}
+							<span style="color: #dc3545; margin-left: 10px; font-size: 0.85em;">
+								(no custom controller)
+							</span>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+</ul>

@@ -33,7 +33,7 @@ class LightTableFactory
 
                 // Якщо це зв'язана сутність (наприклад Customer) без кастомного атрибуту,
                 // намагаємось витягнути її назву, якщо вона має LightEntity, або через __toString()
-                if ($meta['type'] === 'link' && is_object($rawValue)) {
+                if ($meta['type'] === 'entity' && is_object($rawValue)) {
                     // Тут логіка для лінків...
                 }
 
