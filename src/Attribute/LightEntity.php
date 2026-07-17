@@ -8,7 +8,11 @@ namespace Corvet\LightSymfonyBundle\Attribute;
 class LightEntity {
     public function __construct(
         public ?string $title = null,
-        public ?string $route = null,
-        public string $parameter = 'id'
+        public ?string $routeSelect = null,
+        public ?string $routeShow = null,
+        public ?string $routeEdit = null,
+        public ?string $routeAdd = null,
+        public ?string $routeDelete = null,
+        public string $fieldId = 'id'
     ) {}
 }
