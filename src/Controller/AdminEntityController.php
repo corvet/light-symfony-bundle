@@ -18,7 +18,7 @@ class AdminEntityController extends AbstractController
     #[Route('/corvet/entity/', name: self::ACTION_SELECT)]
     public function select(EntityRegistryExplorer $explorer): Response
     {
-        return $this->render('@CorvetLightSymfony/admin/select.html.twig', [
+        return $this->render('@CorvetLightSymfonyBundle/admin/select.html.twig', [
             'entityTree' => $explorer->getSchemaMap(),
         ]);
     }
