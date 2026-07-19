@@ -27,10 +27,6 @@ class CorvetLightSymfonyExtension extends Extension implements PrependExtensionI
                         dirname(__DIR__, 2) . '/assets' => '@corvet/light-symfony-bundle',
                     ],
                 ],
-                'router' => [
-                    'resource' => dirname(__DIR__) . '/Controller/', // Шлях до папки з контролерами
-                    'type' => 'attribute',
-                ],
             ]);
         }
 
