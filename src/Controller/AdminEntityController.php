@@ -11,11 +11,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class AdminEntityController extends AbstractController
 {
-    public const ACTION_SELECT = 'admin_entity_select';
-    public const ACTION_INDEX = 'admin_entity_index';
-    public const ACTION_SHOW = 'admin_entity_show';
+    public const ACTION_SELECT = 'corvet_entity_select';
+    public const ACTION_INDEX = 'corvet_entity_index';
+    public const ACTION_SHOW = 'corvet_entity_show';
 
-    #[Route('/admin/entity/', name: self::ACTION_SELECT)]
+    #[Route('/corvet/entity/', name: self::ACTION_SELECT)]
     public function select(EntityRegistryExplorer $explorer): Response
     {
         return $this->render('@CorvetLightSymfony/admin/select.html.twig', [
@@ -23,7 +23,7 @@ class AdminEntityController extends AbstractController
         ]);
     }
 
-    #[Route('/admin/entity/{entity}/', name: self::ACTION_INDEX)]
+    #[Route('/corvet/entity/{entity}/', name: self::ACTION_INDEX)]
     public function fallbackIndex(string $entity): Response
     {
         // $entity прийде як "App-Entity-Inventory-Nomenclature"
@@ -34,7 +34,7 @@ class AdminEntityController extends AbstractController
         return new Response("Автоматичний список для: " . $className);
     }
 
-    #[Route('/admin/entity/{entity}/{id}', name: self::ACTION_SHOW, requirements: ['id' => '\d+'])]
+    #[Route('/corvet/entity/{entity}/{id}', name: self::ACTION_SHOW, requirements: ['id' => '\d+'])]
     public function fallbackShow(string $entity, int $id): Response
     {
         $className = str_replace('-', '\\', $entity);
