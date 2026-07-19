@@ -7,7 +7,7 @@
 				{% for entity in entities %}
 					<li>
 						{# 1. Посилання на автоматичний Adminer-інтерфейс бандла #}
-						<a href="{{ path('admin_entity_index', { 'entity': entity.slug }) }}">
+						<a href="{{ path('corvet_entity_index', { 'entity': entity.slug }) }}">
 							{{ entity.shortName }}
 						</a>
 
