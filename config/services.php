@@ -18,14 +18,4 @@ return static function (ContainerConfigurator $container): void {
             '../src/CorvetLightSymfonyBundle.php',
             '../src/DependencyInjection/',
         ]);
-
-    $services
-        ->set(AdminEntityController::class)
-            // ->args([
-            //     service('twig'),
-            //     service('doctrine'),
-            //     service('profiler'),
-            // ])
-            // ->tag('controller.service_arguments')
-            ;
 };
